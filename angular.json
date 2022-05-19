@@ -116,6 +116,22 @@
           }
         }
       }
+    },
+    "messages": {
+      "projectType": "library",
+      "root": "projects/messages",
+      "sourceRoot": "projects/messages/src",
+      "prefix": "lib",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/messages"],
+          "options": {
+            "jestConfig": "projects/messages/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
     }
   },
   "defaultProject": "todo-training"

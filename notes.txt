@@ -51,6 +51,23 @@ Lessons order is not really clear when you compare the video to the manual, it f
 13. It would be REALLY cool to have Lowgular-driven interactions with ActivatedRoute under an RMB action
   Writing code is cool, but when it's generated it's even cooler
 
+14. I should theoretically be doing L2P1 now (Stworz formularz i pokaz w konsoli),
+      but judging from the description there are at least 2 steps missing:
+
+  A. Creation of the 'messages' lib
+  B. Create a PAGE (not a smart component like in the instruction manual) called 'contact-us'
+  C. Create a contact-us-form smart component inside the messages lib
+
+  So that's that I did in this PR, but the instruction manual is definitely missing those 2 points
+
+  When creating the 'contact-us' page, everything was OK -
+    imports were there which is a bit of a problem since it sometimes works, sometimes does not
+
+  I noticed that every new page's/component's template has an h1 tag,
+    and then it has to be replaced with sth else - and even when we want a header,
+    we need to replace it with another tag anyway
+    Make it h3 by default?
+
 
 
 
