@@ -27,6 +27,17 @@
 8. Default Bootstrap hamburger from the copy-paste code example on their webpage is broken;
   this has been the case since 4.1.x, and they still have not fixed it
 
+9. When creating Smart Components inside a lib, the imports are there and everything is as it should -
+    it is not formatted, but that's OK because there is nothing I have to import manually - cool!
+    If the same schematics code for imports is used for pages, that should fix the problem with pages super quickly
+
+    Quick note here - to make code for more legible, turn off the "Compact Folders" option inside VSCode settings
+
+10. Creating a smart component creates it inside adapters/primary/components,
+  and not inside adapters/primary/ui as the instruction manual suggests - is that on purpose?
+  
+  If so, the instruction manual should be updated
+
 
 
 
