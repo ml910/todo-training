@@ -93,7 +93,7 @@ Lessons order is not really clear when you compare the video to the manual, it f
       Give a hint, when the hint choice is made, suggest import and directory from which to do it
       Quick, clean, intuitive
 
-      
+18. git stash does not work on libs created with Lowgular
 
 
 
