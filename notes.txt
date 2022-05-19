@@ -23,3 +23,9 @@
 7. When explaining ActivatedRoute and dynamic params it would be cool to extend the task with click event
     with redirection to specific page of an employee
     It would be super useful to show redirection to specific employee on click inside the employees list
+
+
+8. Default Bootstrap hamburger from the copy-paste code example on their webpage is broken;
+  this has been the case since 4.1.x, and they still have not fixed it
+
+
