@@ -88,6 +88,12 @@ Lessons order is not really clear when you compare the video to the manual, it f
     SO
     First I will create the lib, the smart component and only then go back to the task in the next commit
 
+    In the meantime, VSCode does not hint at smart component names inside pages' templates
+      This is annoying, but not yet terrible - what would be really cool is to do it like in Webstorm
+      Give a hint, when the hint choice is made, suggest import and directory from which to do it
+      Quick, clean, intuitive
+
+      
 
 
 
