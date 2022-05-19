@@ -5,11 +5,7 @@
   "projects": {
     "todo-training": {
       "projectType": "application",
-      "schematics": {
-        "@schematics/angular:component": {
-          "style": "scss"
-        }
-      },
+      "schematics": { "@schematics/angular:component": { "style": "scss" } },
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -23,13 +19,8 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "aot": true,
-            "assets": [
-              "src/favicon.ico",
-              "src/assets"
-            ],
-            "styles": [
-              "src/styles.scss"
-            ],
+            "assets": ["src/favicon.ico", "src/assets"],
+            "styles": ["src/styles.scss"],
             "scripts": []
           },
           "configurations": {
@@ -64,20 +55,14 @@
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
-          "options": {
-            "browserTarget": "todo-training:build"
-          },
+          "options": { "browserTarget": "todo-training:build" },
           "configurations": {
-            "production": {
-              "browserTarget": "todo-training:build:production"
-            }
+            "production": { "browserTarget": "todo-training:build:production" }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
-          "options": {
-            "browserTarget": "todo-training:build"
-          }
+          "options": { "browserTarget": "todo-training:build" }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
@@ -86,13 +71,8 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "karma.conf.js",
-            "assets": [
-              "src/favicon.ico",
-              "src/assets"
-            ],
-            "styles": [
-              "src/styles.scss"
-            ],
+            "assets": ["src/favicon.ico", "src/assets"],
+            "styles": ["src/styles.scss"],
             "scripts": []
           }
         },
@@ -104,9 +84,7 @@
               "tsconfig.spec.json",
               "e2e/tsconfig.json"
             ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         },
         "e2e": {
@@ -119,6 +97,22 @@
             "production": {
               "devServerTarget": "todo-training:serve:production"
             }
+          }
+        }
+      }
+    },
+    "team": {
+      "projectType": "library",
+      "root": "projects/team",
+      "sourceRoot": "projects/team/src",
+      "prefix": "lib",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/team"],
+          "options": {
+            "jestConfig": "projects/team/jest.config.js",
+            "passWithNoTests": true
           }
         }
       }
