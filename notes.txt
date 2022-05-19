@@ -35,9 +35,18 @@
 
 10. Creating a smart component creates it inside adapters/primary/components,
   and not inside adapters/primary/ui as the instruction manual suggests - is that on purpose?
-  
+
   If so, the instruction manual should be updated
 
+11. When creating a smart component inside a lib, it adds 'lib' at the beginning of the component's selector
+    It's not a lib, it's a component
+    There could be 2 components named the same inside 2 different libs if it's not changed
+    Both would be 'lib-component-name' in that case
+
+12. THIS ONE IS SUPER IMPORTANT - here:
+https://docs.google.com/document/d/1WY_PwyavpKguFNrKEn7cRraM6JRzOD8bY1vqBqGKO0U/edit#
+
+Lessons order is not really clear when you compare the video to the manual, it feels jumpy
 
 
 
