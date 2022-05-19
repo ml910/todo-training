@@ -1,3 +1,4 @@
+import { AboutUsPageModule } from './pages/about-us.page-module';
 import { HomePageModule } from './pages/home.page-module';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -8,6 +9,10 @@ const routes: Routes = [
   {
     path: '',
     loadChildren: () => HomePageModule,
+  },
+  {
+    path: 'o-nas',
+    loadChildren: () => AboutUsPageModule,
   },
 ];
 
