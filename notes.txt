@@ -6,3 +6,20 @@
   It creates the files, with correct spelling, etc. but does not actually import anything
   If you have an extensions for imports you might be OK, but importing manually every time is annoying
 
+3. Adding and connecting pages is intuitive and friendly, no problems with subpages
+
+4. Just noticed it now - components are created without testing spec files,
+  but we do have the 'Debug Jest', 'Run Jest' and 'Watch Jest' options available
+  What happened to tests?
+  Do I need to create components in some different way to get pre-processed spec files generated?
+
+5. There is no functionality for ActivatedRoute interactions in Lowgular that I could find,
+  and the instructional videos also do not show such functionality - this would be super important to add I think
+  Nice that that the video does show to not use snapshot, though
+  (timestamp 8:10) -> https://drive.google.com/file/d/1q9t8mh_uQky-4JZLWMd-dkGgk8y5Pq_U/view
+
+6. Git stash does not revert creating pages
+
+7. When explaining ActivatedRoute and dynamic params it would be cool to extend the task with click event
+    with redirection to specific page of an employee
+    It would be super useful to show redirection to specific employee on click inside the employees list

@@ -1,3 +1,5 @@
+import { EmployeeDetailsPageModule } from './pages/employee-details.page-module';
+import { EmployeesPageModule } from './pages/employees.page-module';
 import { AboutUsPageModule } from './pages/about-us.page-module';
 import { HomePageModule } from './pages/home.page-module';
 import { NgModule } from '@angular/core';
@@ -13,6 +15,14 @@ const routes: Routes = [
   {
     path: 'o-nas',
     loadChildren: () => AboutUsPageModule,
+  },
+  {
+    path: 'pracownicy',
+    loadChildren: () => EmployeesPageModule,
+  },
+  {
+    path: 'pracownicy/:name',
+    loadChildren: () => EmployeeDetailsPageModule,
   },
 ];
 
