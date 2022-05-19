@@ -3,6 +3,7 @@ import {
   Component,
   ViewEncapsulation,
 } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Observable, of } from 'rxjs';
 
 interface TeamMember {
@@ -20,6 +21,8 @@ interface TeamMember {
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class OurTeamComponent {
+  constructor(private _route: ActivatedRoute, private _router: Router) {}
+
   teamMembers$: Observable<TeamMember[]> = of([
     {
       name: 'John',
@@ -36,4 +39,8 @@ export class OurTeamComponent {
       description: 'A smiley woman',
     },
   ]);
+
+  redirectToSpecificMember(memberName: string): void {
+    this._router.navigate([memberName], { relativeTo: this._route });
+  }
 }

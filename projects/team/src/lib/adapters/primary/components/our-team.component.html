@@ -1,6 +1,10 @@
 <div class="container">
   <div class="d-flex flex-column flex-md-row row">
-    <div *ngFor="let member of teamMembers$ | async" class="col-12 col-md-4">
+    <div
+      *ngFor="let member of teamMembers$ | async"
+      class="col-12 col-md-4"
+      (click)="redirectToSpecificMember(member.name)"
+    >
       <img [src]="member.imageUrl" class="w-100 h-100 object-fit-cover" />
       <p class="d-flex flex-column">
         <span class="mt-3">{{ member.name }}</span>

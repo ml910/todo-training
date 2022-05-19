@@ -48,7 +48,8 @@ https://docs.google.com/document/d/1WY_PwyavpKguFNrKEn7cRraM6JRzOD8bY1vqBqGKO0U/
 
 Lessons order is not really clear when you compare the video to the manual, it feels jumpy
 
-
+13. It would be REALLY cool to have Lowgular-driven interactions with ActivatedRoute under an RMB action
+  Writing code is cool, but when it's generated it's even cooler
 
 
 
