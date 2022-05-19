@@ -1,0 +1,6 @@
+1. Lowgular handles routing, but has problems with imports when creating page or when adding routing to a routing module
+    It has the names of what to import, but just does import it (including decorators, like @NgModule amd @Component)
+    + the error for tsconfig.json still occurs
+
+
+
