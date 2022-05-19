@@ -3,6 +3,7 @@ import {
   Component,
   ViewEncapsulation,
 } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
 
 // TODO: Not a lib, it's a component inside a lib
 @Component({
@@ -11,4 +12,13 @@ import {
   encapsulation: ViewEncapsulation.None,
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class ContactUsFormComponent {}
+export class ContactUsFormComponent {
+  readonly messageForm: FormGroup = new FormGroup({
+    email: new FormControl(),
+    text: new FormControl(),
+  });
+
+  onSubmitClicked(): void {
+    console.log(this.messageForm.getRawValue());
+  }
+}

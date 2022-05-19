@@ -1,1 +1,19 @@
-Contact us form
+<!-- This (ngSubmit) was added manually, and the event was connected manually as well -->
+<form [formGroup]="messageForm" (ngSubmit)="onSubmitClicked()">
+  <input
+    class="form-control mb-3"
+    type="text"
+    formControlName="email"
+    placeholder="Email"
+    style="width: 300px"
+  />
+  <input
+    class="form-control"
+    type="text"
+    formControlName="text"
+    placeholder="Text"
+    style="width: 300px"
+  />
+
+  <button class="mt-4 btn btn-dark" type="submit">Submit</button>
+</form>

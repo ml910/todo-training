@@ -68,6 +68,20 @@ Lessons order is not really clear when you compare the video to the manual, it f
     we need to replace it with another tag anyway
     Make it h3 by default?
 
+15. When creating a form, why not use FormBuilder?
+  It has multiple super useful methods, and IDE will help you with hints if you use it
+  Makes it radically easier for new developers to understand/try to learn Angular Reactive forms
+
+16. Form HTML tags create inside HTML - YES!!!
+      BUT it created 3 inputs when there are 2 actual form controls - the third one should be a button
+      ^ This one is really important
+
+      + it was an input type submit, but there is no (ngSubmit) event on the created form,
+          plus the input that was created was type="submit",
+          so it looks like Lowgular got confused and stopped half-way
+          (created an element but a wrong one, but then it put partially correct attributes in it)
+
+
 
 
 
