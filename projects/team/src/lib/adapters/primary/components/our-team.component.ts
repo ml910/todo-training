@@ -13,6 +13,7 @@ interface TeamMember {
   description: string;
 }
 
+// Here
 // TODO: This is not a lib, it's a component inside a lib
 @Component({
   selector: 'lib-our-team',

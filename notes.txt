@@ -81,6 +81,12 @@ Lessons order is not really clear when you compare the video to the manual, it f
           so it looks like Lowgular got confused and stopped half-way
           (created an element but a wrong one, but then it put partially correct attributes in it)
 
+17. L3E2 is already solved by Lowgular,
+    L3E1 happens after L3E2 if you look at the videos but in the instruction manual is listed before it
+    The 'employees' lib was not pointed anywhere earlier, but is required for L3E1 from the get-go
+
+    SO
+    First I will create the lib, the smart component and only then go back to the task in the next commit
 
 
 

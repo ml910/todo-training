@@ -5,6 +5,7 @@ import {
   ChangeDetectionStrategy,
 } from '@angular/core';
 
+// TODO: This should become a part of a separate lib at some point, but then we already have our-team
 @Component({
   selector: 'app-employee-details-page',
   templateUrl: './employee-details.page.html',
