@@ -95,6 +95,9 @@ Lessons order is not really clear when you compare the video to the manual, it f
 
 18. git stash does not work on libs created with Lowgular
 
+19. The best thing about Lowgular -
+      the project compiles every single time unless you make an absolutely critical mistake
+
 
 
 
