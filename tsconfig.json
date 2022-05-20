@@ -12,10 +12,11 @@
     "target": "es2015",
     "module": "es2020",
     "lib": ["es2018", "dom"],
+    "skipLibCheck": true,
     "paths": {
       "@team": ["projects/team/src/index.ts"],
       "@messages": ["projects/messages/src/index.ts"]
-    }
+    },
   },
   "angularCompilerOptions": { "enableI18nLegacyMessageIdFormat": false }
 }
