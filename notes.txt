@@ -98,8 +98,9 @@ Lessons order is not really clear when you compare the video to the manual, it f
 19. The best thing about Lowgular -
       the project compiles every single time unless you make an absolutely critical mistake
 
-
-
+20. Had to remove part of TeamMemberDTO since the next lessons (L4E1)
+  actually do not include DepartmentDTO in any way (L3P1 should be moved somewhere further in the course in that case)
+  Videos are very often contradicting to the instruction manual
 
 
 
