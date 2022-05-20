@@ -102,8 +102,14 @@ Lessons order is not really clear when you compare the video to the manual, it f
   actually do not include DepartmentDTO in any way (L3P1 should be moved somewhere further in the course in that case)
   Videos are very often contradicting to the instruction manual
 
+21. When creating ports, the plural is missing in files name, interface and the injection token
+  (not sure about irregular nouns, but for regular ones for sure the 's' is missing)
 
+  Video still shows criterion as optional parameter, and Lowgular completely ignores it/does not create it
 
+  This problem does not exist when creating a Firebase service -
+    contacted Mateusz and he explained everything to do here:
+      https://drive.google.com/drive/folders/12ztyX7xW0le_K_RQgWo8qvGvSh40o8KR
 
 
 
