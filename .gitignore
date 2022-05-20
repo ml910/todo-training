@@ -45,11 +45,3 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
-
-# Custom files
-/src/app/firebase.config.ts
-
-# Firebase
-.firebase
-*-debug.log
-.runtimeconfig.json

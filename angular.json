@@ -127,22 +127,6 @@
           }
         }
       }
-    },
-    "example": {
-      "projectType": "library",
-      "root": "projects/example",
-      "sourceRoot": "projects/example/src",
-      "prefix": "lib",
-      "architect": {
-        "test": {
-          "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/example"],
-          "options": {
-            "jestConfig": "projects/example/jest.config.js",
-            "passWithNoTests": true
-          }
-        }
-      }
     }
   },
   "defaultProject": "todo-training"

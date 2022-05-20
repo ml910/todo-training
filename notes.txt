@@ -111,8 +111,6 @@ Lessons order is not really clear when you compare the video to the manual, it f
     contacted Mateusz and he explained everything to do here:
       https://drive.google.com/drive/folders/12ztyX7xW0le_K_RQgWo8qvGvSh40o8KR
 
-22. Could not go through the flow for Firebase, no matter the updates the error remained the same -
-  Error 400: invalid_request
 
 
 
