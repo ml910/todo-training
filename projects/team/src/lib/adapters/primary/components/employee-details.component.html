@@ -1,0 +1,13 @@
+<div *ngIf="employee$ | async as employeeDetails">
+  <div class="card col-4">
+    <img
+      [src]="employeeDetails.imageUrl"
+      class="card-img-top"
+      [alt]="employeeDetails.name"
+    />
+    <div class="card-body">
+      <h5 class="card-title">{{ employeeDetails.name }}</h5>
+      <p class="card-text">{{ employeeDetails.bio }}</p>
+    </div>
+  </div>
+</div>

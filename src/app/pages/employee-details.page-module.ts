@@ -1,7 +1,11 @@
-import { EmployeeDetailsPage } from './employee-details.page';
-import { RouterModule } from '@angular/router';
-import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
+import {
+  EmployeeDetailsComponentModule,
+  FirebaseEmployeesServiceModule,
+} from '@team';
+import { EmployeeDetailsPage } from './employee-details.page';
 
 @NgModule({
   imports: [
@@ -12,6 +16,8 @@ import { NgModule } from '@angular/core';
         component: EmployeeDetailsPage,
       },
     ]),
+    FirebaseEmployeesServiceModule,
+    EmployeeDetailsComponentModule,
   ],
   declarations: [EmployeeDetailsPage],
   providers: [],

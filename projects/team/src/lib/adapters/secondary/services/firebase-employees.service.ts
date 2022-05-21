@@ -1,12 +1,13 @@
 import { Injectable } from '@angular/core';
-// Corrected manually the one below, again (3rd time)
 import { AngularFirestore } from '@angular/fire/firestore';
-import { Observable, from } from 'rxjs';
-import { map } from 'rxjs/operators';
+import { Observable, from, of, throwError } from 'rxjs';
+import { map, switchMap } from 'rxjs/operators';
 import { GetsAllTeamMemberDtoPort } from '../../../application/ports/secondary/dto/gets-all-team-member.dto-port';
 import { AddsTeamMemberDtoPort } from '../../../application/ports/secondary/dto/adds-team-member.dto-port';
+import { GetsOneTeamMemberDtoPort } from '../../../application/ports/secondary/dto/gets-one-team-member.dto-port';
 import { TeamMemberDTO } from '../../../application/ports/secondary/dto/team-member.dto';
 
+// Corrected manually the one below, again (3rd time)
 // Same thing an in the last commit - this import had to be corrected to not include 'compat'
 // ^ This comment had to be added twice - Lowgular replaces imports by force, removing the previous ones?
 
@@ -14,7 +15,10 @@ import { TeamMemberDTO } from '../../../application/ports/secondary/dto/team-mem
 
 @Injectable()
 export class FirebaseEmployeesService
-  implements GetsAllTeamMemberDtoPort, AddsTeamMemberDtoPort
+  implements
+    GetsAllTeamMemberDtoPort,
+    AddsTeamMemberDtoPort,
+    GetsOneTeamMemberDtoPort
 {
   constructor(private _client: AngularFirestore) {}
 
@@ -28,5 +32,18 @@ export class FirebaseEmployeesService
     return from(this._client.collection('team-members').add(teamMember)).pipe(
       map(() => void 0)
     );
+  }
+
+  getOne(id: string): Observable<TeamMemberDTO> {
+    return this._client
+      .doc<TeamMemberDTO>('team-members/' + id)
+      .valueChanges({ idField: 'id' })
+      .pipe(
+        switchMap((item) =>
+          item
+            ? of(item)
+            : throwError(new Error('Item does not exist in firebase'))
+        )
+      );
   }
 }

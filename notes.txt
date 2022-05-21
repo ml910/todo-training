@@ -217,6 +217,30 @@ Lessons order is not really clear when you compare the video to the manual, it f
         C. A feature finished in less than 15 minutes, including styling
 
 
+  27. Whole Lesson 6 done in this commit. What was done:
+
+    DTOPort for getting a single employee (getOne)
+    Implementation of that port inside the FireBaseService
+    Routing changed for employeeId instead of 'name'
+    Creation of employee detail smart component + moving logic there from our-team smart component
+    Added manual imports / correcting imports for the service
+    Added property for a single employee based on the getOne port
+    ActivatedRoute with snapshot (that was requested in the task)
+    Presentation of data for single employee (async pipe), a bit of styling
+    Checking if everything works correctly
+
+    A. No custom styling - good
+    B. No application layer
+    C. No tests
+    D. Everything compiled correctly, but the fact of correcting Firebase imports
+      to NOT include 'compat' starts to be a little bit annoying
+      ^ It has become automatic to do that now, it's just annoying to have to do that every time
+    E. The cleanliness of code is beautiful here, super glad I don't have to write NestJS BE for it
+
+    Everything took almost 18 minutes (stopwatch)
+
+
+
 
 
 
