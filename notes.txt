@@ -117,7 +117,26 @@ Lessons order is not really clear when you compare the video to the manual, it f
   I will try to degrade Angular to v11 and Firebase to v6 and see how that works out.
     If that does not help, I would say it's highly possible that it is the case of Lowgular extension itself.
 
+!!!!!!!!!
+  EXTREMELY IMPORTANT: Lowgular does not work with Angular v13 and Firebase v7,
+    which WILL be installed by default if you use default ng commands with npm available online since
+    it will look for highest available stable version on NPM (which right now is Angular 13.3.x and Firebase 7.3)
 
+  ^ That means that people who do not know how to play around with config will be 100% lost
+      and will not know how to even revert/find a solution on their own.
+      Non-technical people will not even know where to start looking.
+
+    Finding out what the issue was with FireBase and Angular compatibility + Firebase problem solving +
+      solving Lowgular issue with ng13 + reverting everything to a working state and coming with a solution
+      took between 5 and 6 hours,
+
+      while creating a new lib, DTO, service, smart component,
+      connecting everything, adding manual imports where necessary,
+       making the notes here etc. took 23 minutes
+
+      This was done while following the video and adjusting to errors I was getting in the console
+      (when I'm proficient, it will take far less, plus I won't be taking extra notes then)
+!!!!!!!!!
 
 
 

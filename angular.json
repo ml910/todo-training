@@ -18,15 +18,10 @@
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
+            "aot": true,
             "assets": ["src/favicon.png", "src/assets"],
             "styles": ["src/styles.scss"],
-            "scripts": [],
-            "vendorChunk": true,
-            "extractLicenses": false,
-            "buildOptimizer": false,
-            "sourceMap": true,
-            "optimization": false,
-            "namedChunks": true
+            "scripts": []
           },
           "configurations": {
             "production": {
@@ -56,8 +51,7 @@
                 }
               ]
             }
-          },
-          "defaultConfiguration": ""
+          }
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
@@ -82,6 +76,17 @@
             "scripts": []
           }
         },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "tsconfig.app.json",
+              "tsconfig.spec.json",
+              "e2e/tsconfig.json"
+            ],
+            "exclude": ["**/node_modules/**"]
+          }
+        },
         "e2e": {
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
@@ -93,7 +98,8 @@
               "devServerTarget": "todo-training:serve:production"
             }
           }
-        }
+        },
+        "deploy": { "builder": "@angular/fire:deploy", "options": {} }
       }
     },
     "team": {
@@ -123,6 +129,22 @@
           "outputs": ["coverage/messages"],
           "options": {
             "jestConfig": "projects/messages/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "example": {
+      "projectType": "library",
+      "root": "projects/example",
+      "sourceRoot": "projects/example/src",
+      "prefix": "lib",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/example"],
+          "options": {
+            "jestConfig": "projects/example/jest.config.js",
             "passWithNoTests": true
           }
         }

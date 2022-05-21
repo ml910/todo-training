@@ -3,16 +3,16 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  firebase: {
-    projectId: 'lowgular-todo-training',
-    appId: '1:1020995741144:web:b94588ed508a8880d6bead',
-    storageBucket: 'lowgular-todo-training.appspot.com',
-    locationId: 'europe-west',
-    apiKey: 'AIzaSyAi4CIymcPmlMo8QOyS7NzhsnPgMqiWGjg',
-    authDomain: 'lowgular-todo-training.firebaseapp.com',
-    messagingSenderId: '1020995741144',
+  production: false,
+    firebase: {
+      projectId: 'lowgular-todo-training',
+      appId: '1:1020995741144:web:b94588ed508a8880d6bead',
+      storageBucket: 'lowgular-todo-training.appspot.com',
+      locationId: 'europe-west',
+      apiKey: 'AIzaSyAi4CIymcPmlMo8QOyS7NzhsnPgMqiWGjg',
+      authDomain: 'lowgular-todo-training.firebaseapp.com',
+      messagingSenderId: '1020995741144',
   },
-  production: false
 };
 
 /*
@@ -22,4 +22,4 @@ export const environment = {
  * This import should be commented out in production mode because it will have a negative impact
  * on performance if an error is thrown.
  */
-// import 'zone.js/plugins/zone-error';  // Included with Angular CLI.
+// import 'zone.js/dist/zone-error';  // Included with Angular CLI.
