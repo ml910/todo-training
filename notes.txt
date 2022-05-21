@@ -138,5 +138,33 @@ Lessons order is not really clear when you compare the video to the manual, it f
       (when I'm proficient, it will take far less, plus I won't be taking extra notes then)
 !!!!!!!!!
 
+22. Package that could help pluralizing, etc. the nouns used for ports names, etc:
+      https://www.npmjs.com/package/i
 
+    ^ Lowgular has problems with pluralizing correctly
 
+23. Whole lesson 4 episodes (I guess the E stands for 'episode'? L4E1 = Lesson 4 Episode 1?)
+      took 12 minutes to complete (measured with a stopwatch), including adding all the notes in the meantime
+
+    A. I did not touch the application layer, so that's not cool
+    B. I did not add any tests, also not cool
+    C. I see how the 2 points above could be added, and I have a feeling it would take up to 5 minutes altogether,
+          which means that we would have a TESTED,
+          working feature that sticks to directory structure,
+          naming convention (well, the plurals are an issue),
+          and compiles correctly in less than 30 minutes.
+          Let's add responsive custom styling to it (let's face it, a proper design system is very rare) of 30 minutes,
+          And we still end up with a full feature within 1 HOUR.
+
+    ^ Connecting the dots was never as easy as before, now that the technical issues are solved.
+
+    I would say technical issues - setup, errors (including both Lowgular and VSCode/TS errors),
+      compatibility issues, manual additions of code that Lowgular does not generate yet,
+      import corrections, notes, etc. take between 80 and 90% of the whole time spent on the course,
+        at least in my case (Linux Ubuntu v20, npm v6, node v14)
+
+        It would be worth checking how it works for people whose systems run on npm v8+ and node v16 -
+          those are the latest stable versions of npm and node available online that
+          would be downloaded with default terminal commands available online
+
+            ^ I'm not going to check these, I've had way too many problems with compatibility already
