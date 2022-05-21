@@ -1,5 +1,5 @@
 <!-- This (ngSubmit) was added manually, and the event was connected manually as well -->
-<form [formGroup]="messageForm" (ngSubmit)="onSubmitClicked()">
+<form [formGroup]="messageForm" (ngSubmit)="onMessageFormSubmited()">
   <input
     class="form-control mb-3"
     type="text"
@@ -10,7 +10,7 @@
   <input
     class="form-control"
     type="text"
-    formControlName="text"
+    formControlName="message"
     placeholder="Text"
     style="width: 300px"
   />

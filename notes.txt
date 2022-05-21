@@ -173,7 +173,7 @@ Lessons order is not really clear when you compare the video to the manual, it f
         took 1m 11s (stopwatch) without the need to look anywhere for suggestions
 
   25. L5E2, L5E3, L5E4, and L5E5 - 4 Episodes in one commit - finished in 12 minutes 18 seconds
-  
+
     What was done:
     creation of a DTO Port for POST/PUT (Firebase is not explicit about it, it just calls it 'add'),
     Implementation of that DTOPort to an existing service, manual correction of imports in 2 places
@@ -188,10 +188,33 @@ Lessons order is not really clear when you compare the video to the manual, it f
     C. Works like a charm, compiles without problems - phenomenal
       ^ This saves hours of hair being pulled out because it works just like that, 'automagicznie'
 
+  26. When doing L5P1 and earlier parts I noticed that the lesson summary/manual does not mention
+        any actions INSIDE Firebase console that you HAVE to do to actually complete tasks mentioned there,
+        like creating messages collection -
+        this would be confusing for people what are not familiar with FireBase/BE and HTTP protocol
 
+      What was done inside L5P1:
+        Adding a collection inside FireBase to host messages (that was the part missing that I mentioned above ^)
+        Adding MessageDTO
+        Adding MessageDTOPort
+        Creating a Firebase messages service, implementing the DTO port, correcting imports manually
+        Adding Form to the contact us component
+        Adding Event Handler for it (called 'Handle DOM Event' now), manually adjusting form submission
+        Manually adding imports of the MessagesFirebaseServiceModule to the contact-us page
+        Manual adjustment to key naming for DTO and form (text -> message)
+        Styling form controls so that they are at least presentable
+        Checking if everything works as intended in FireBase,
+          if form gets submitted correctly inside the collection
 
+        Time that it took: almost 8 minutes
 
+        A. I did not add tests, would be good to know when I should do that
+            I would assume that after all the methods, implementations of Query/Command ports is done, etc.
+            ^ Correct? OR do they add on-the-go, as I write? (that would be out-of-this-world epic)
 
+        B. No Application layer
+
+        C. A feature finished in less than 15 minutes, including styling
 
 
 

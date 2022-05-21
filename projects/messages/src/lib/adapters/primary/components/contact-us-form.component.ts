@@ -1,9 +1,14 @@
 import {
   ChangeDetectionStrategy,
   Component,
+  Inject,
   ViewEncapsulation,
 } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import {
+  ADDS_MESSAGE_DTO,
+  AddsMessageDtoPort,
+} from '../../../application/ports/secondary/dto/adds-message.dto-port';
 
 // TODO: Not a lib, it's a component inside a lib
 @Component({
@@ -14,11 +19,22 @@ import { FormControl, FormGroup } from '@angular/forms';
 })
 export class ContactUsFormComponent {
   readonly messageForm: FormGroup = new FormGroup({
+    // TODO: Validation
     email: new FormControl(),
-    text: new FormControl(),
+    message: new FormControl(),
   });
 
-  onSubmitClicked(): void {
-    console.log(this.messageForm.getRawValue());
+  constructor(
+    @Inject(ADDS_MESSAGE_DTO) private _addsMessageDto: AddsMessageDtoPort
+  ) {}
+
+  // TODO: Same two t's for submitted
+  onMessageFormSubmited(): void {
+    this._addsMessageDto
+      .add({
+        email: this.messageForm.controls.email.value,
+        message: this.messageForm.controls.message.value,
+      })
+      .subscribe();
   }
 }
