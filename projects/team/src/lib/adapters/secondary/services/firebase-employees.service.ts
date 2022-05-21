@@ -1,3 +1,4 @@
+import { ContextDtoStoragePort } from './../../../application/ports/secondary/dto/context-dto.storage-port';
 import { Injectable } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { Observable, from, of, throwError } from 'rxjs';
@@ -18,7 +19,11 @@ export class FirebaseEmployeesService
   implements
     GetsAllTeamMemberDtoPort,
     AddsTeamMemberDtoPort,
-    GetsOneTeamMemberDtoPort
+    GetsOneTeamMemberDtoPort,
+    // This one had to be added manually -
+    // Lowgular does not (anymore?) have the Implement Storage Port option in the dropdown
+    // TODO: At this point too many things are out sync to continue using Lowgular while following the course task list and videos
+    ContextDtoStoragePort
 {
   constructor(private _client: AngularFirestore) {}
 
@@ -46,4 +51,6 @@ export class FirebaseEmployeesService
         )
       );
   }
+
+
 }
