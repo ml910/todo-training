@@ -168,3 +168,41 @@ Lessons order is not really clear when you compare the video to the manual, it f
           would be downloaded with default terminal commands available online
 
             ^ I'm not going to check these, I've had way too many problems with compatibility already
+
+  24. L5E1 - creating Admin page, adding to routing, adding redirect inside topbar
+        took 1m 11s (stopwatch) without the need to look anywhere for suggestions
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

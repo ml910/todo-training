@@ -5,6 +5,7 @@ import { AboutUsPageModule } from './pages/about-us.page-module';
 import { EmployeesPageModule } from './pages/employees.page-module';
 import { EmployeeDetailsPageModule } from './pages/employee-details.page-module';
 import { ContactUsPageModule } from './pages/contact-us.page-module';
+import { AdminPageModule } from './pages/admin.page-module';
 
 const routes: Routes = [
   // Added with Lowgular's 'Add page to routing'
@@ -28,6 +29,10 @@ const routes: Routes = [
   {
     path: 'kontakt',
     loadChildren: () => ContactUsPageModule,
+  },
+  {
+    path: 'admin',
+    loadChildren: () => AdminPageModule,
   },
 ];
 
