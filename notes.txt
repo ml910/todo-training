@@ -111,7 +111,11 @@ Lessons order is not really clear when you compare the video to the manual, it f
     contacted Mateusz and he explained everything to do here:
       https://drive.google.com/drive/folders/12ztyX7xW0le_K_RQgWo8qvGvSh40o8KR
 
+  Firebase works, but then I updated Lowgular extension to 0.0.22 and VSCode started throwing the following error:
+    'Unexpected token } in JSON at position 509', while pointing directly to the extension.
 
+  I will try to degrade Angular to v11 and Firebase to v6 and see how that works out.
+    If that does not help, I would say it's highly possible that it is the case of Lowgular extension itself.
 
 
 
