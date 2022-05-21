@@ -172,6 +172,22 @@ Lessons order is not really clear when you compare the video to the manual, it f
   24. L5E1 - creating Admin page, adding to routing, adding redirect inside topbar
         took 1m 11s (stopwatch) without the need to look anywhere for suggestions
 
+  25. L5E2, L5E3, L5E4, and L5E5 - 4 Episodes in one commit - finished in 12 minutes 18 seconds
+  
+    What was done:
+    creation of a DTO Port for POST/PUT (Firebase is not explicit about it, it just calls it 'add'),
+    Implementation of that DTOPort to an existing service, manual correction of imports in 2 places
+    Creation of a new smart component, adding a form inside of it, correcting the template,
+      adding notes inside the template, adding an event handler, manually writing what it does,
+      leaving notes on the way,
+    Manual addition of Firebase service to the page where I'm using it now
+    Correcting imports in the meantime in different parts of the task
+
+    A. I did not let it go through any application layer/state, not cool
+    B. No tests
+    C. Works like a charm, compiles without problems - phenomenal
+      ^ This saves hours of hair being pulled out because it works just like that, 'automagicznie'
+
 
 
 

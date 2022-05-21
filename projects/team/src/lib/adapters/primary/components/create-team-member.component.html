@@ -1,0 +1,32 @@
+<!--  ngSubmit had to be added manually -->
+<form [formGroup]="addEmployee" (ngSubmit)="onAddEmployeeSubmited(addEmployee)">
+  <input
+    type="text"
+    class="form-control w-25 mb-3"
+    formControlName="id"
+    placeholder="Id"
+  />
+  <input
+    type="text"
+    class="form-control mb-3 w-25"
+    formControlName="name"
+    placeholder="Name"
+  />
+  <input
+    type="text"
+    class="form-control w-25 mb-3"
+    formControlName="bio"
+    placeholder="Bio"
+  />
+  <input
+    type="text"
+    class="form-control w-25 mb-3"
+    formControlName="imageUrl"
+    placeholder="Image Url"
+  />
+
+  <!-- This is what Lowgular created, and what we need is a button  -->
+  <!-- <input type="submit" value="Submit" /> -->
+
+  <button class="btn btn-dark mt-5">Create Member</button>
+</form>
