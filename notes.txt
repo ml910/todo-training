@@ -239,7 +239,14 @@ Lessons order is not really clear when you compare the video to the manual, it f
 
     Everything took almost 18 minutes (stopwatch)
 
+  28. Stash does not work on anything connected to Lowgular -
+        this is a serious problem when you created a bigger piece of code and want
+        to revert everything to state from the last commit
+        (you could use git reset, but then it's less intuitive)
 
+  29. Cannot create a StoragePort - the option is gone in the current version of Lowgular.
+        Creating a Storage is not the same as StoragePort - I tried and it is definitely not the same,
+        and there is no option from the RMB click that suggests a similar solution
 
 
 
