@@ -248,20 +248,9 @@ Lessons order is not really clear when you compare the video to the manual, it f
         Creating a Storage is not the same as StoragePort - I tried and it is definitely not the same,
         and there is no option from the RMB click that suggests a similar solution
 
-  30. Had to create ContextDTOStoragePort manually, based on the video -
-        hopefully there are no extra imports of it for now, otherwise stuff will break
 
-        Merge Data Property also is not there in the dropdown menu in Lowgular, so I wrote it manually as best possible
 
-        StoragePorts cannot be implemented inside InMemoryContextStorage since Lowgular does not have this option
-          It does have the option to implement ContextPort, but then... you cannot Create/Add/Make a ContextPort in the first place
 
-        At this point too many things are out o sync to continue using Lowgular
-
-        The problems occur in L7E1 onwards, by the time we reach L7E3's bullet points
-          there are already too many things missing to continue.
-
-        This PR will probably have to be reverted.
 
 
 

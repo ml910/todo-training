@@ -1,8 +1,3 @@
-import { switchMap } from 'rxjs/operators';
-import {
-  CONTEXT_DTO_STORAGE,
-  ContextDtoStoragePort,
-} from './../../../application/ports/secondary/dto/context-dto.storage-port';
 import { ActivatedRoute } from '@angular/router';
 import {
   GETS_ONE_TEAM_MEMBER_DTO,
@@ -24,17 +19,14 @@ import {
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class EmployeeDetailsComponent {
+  employee$: Observable<TeamMemberDTO> = this._getsOneTeamMemberDto.getOne(
+    this._route.snapshot.params.employeeId
+  );
+  routeParams$ = this._route.params;
+
   constructor(
     private _route: ActivatedRoute,
     @Inject(GETS_ONE_TEAM_MEMBER_DTO)
-    private _getsOneTeamMemberDto: GetsOneTeamMemberDtoPort,
-    @Inject(CONTEXT_DTO_STORAGE)
-    private _contextDtoStoragePort: ContextDtoStoragePort
+    private _getsOneTeamMemberDto: GetsOneTeamMemberDtoPort
   ) {}
-
-  employee$: Observable<TeamMemberDTO> = this._contextDtoStoragePort
-    .asObservable()
-    .pipe(
-      switchMap((data) => this._getsOneTeamMemberDto.getOne(data.employeeId))
-    );
 }
